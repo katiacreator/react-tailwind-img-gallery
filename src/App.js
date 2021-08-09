@@ -20,6 +20,8 @@ function App() {
   }, [])
 
   return (
+
+    //not responsize use flex but makes everything mobile-first figure this out
     <div className="container mx-auto">
       <div className="grid grid-cols-3 gap-4">
       {images.map(image => (

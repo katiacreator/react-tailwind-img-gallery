@@ -1,22 +1,23 @@
 import React from 'react'
 
-const ImageCard = () => {
+
+const ImageCard = ({ image }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-    <img src="https://source.unsplash.com/random" alt="" className="" />
+    <img src={image.webformatURL} alt="" className="w-full" />
     <div className="px-6 py-4">
-      <div className=" font-bold text-purple-500 text-xl">Photo by John Doe</div>
+      <div className=" font-bold text-purple-500 text-xl">Photo by {image.user}</div>
     </div>
     <div>
       <ul>
         <li>
-          <p className="px-6 py-1">Views: 4000</p> 
+          <p className="px-6 py-1">Views: {image.views}</p> 
         </li>
         <li>
-          <p className="px-6 py-1">Downloads: 400</p> 
+          <p className="px-6 py-1">Downloads: {image.downloads}</p> 
         </li>
         <li>
-          <p className="px-6 py-1">Likes: 400</p> 
+          <p className="px-6 py-1">Likes: {image.likes}</p> 
         </li>
       </ul>
     </div>
